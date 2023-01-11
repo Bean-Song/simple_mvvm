@@ -29,6 +29,8 @@ class MainViewModel @Inject constructor(private val mRepo : MainRepository) : Ba
 
     val gitEventList : LiveData<List<GitEvents>> = _gitEventLiveData
 
+    var eventsMutableList = mutableListOf<GitEvents>()
+
     fun requestGitEvent () {
         viewModelScope.launch { 
             mRepo.getGitEvents()
@@ -44,6 +46,7 @@ class MainViewModel @Inject constructor(private val mRepo : MainRepository) : Ba
                     isLoading.postValue(false)
                 }
                 .collect {
+                    eventsMutableList.addAll(it)
                     _gitEventLiveData.postValue(it)
                 }
         }

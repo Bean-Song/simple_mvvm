@@ -11,6 +11,7 @@ package pers.beans.smpmvvm.bean
  */
 data class GitEvents(
     var actor: Actor?,
+    var created_at: String?,
     var id: String?,
     var type: String?
 )

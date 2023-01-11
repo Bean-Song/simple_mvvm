@@ -48,6 +48,9 @@ dependencies {
     //api 'androidx.lifecycle:lifecycle-runtime-ktx:2.3.1'
     kapt 'com.google.dagger:hilt-android-compiler:2.44.2'
 
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.4'
+    implementation 'com.github.fornewid:neumorphism:0.3.0'
+
     // Okhttp + Retrofit
     implementation 'com.squareup.okhttp3:okhttp:4.9.1'
     implementation 'com.squareup.okhttp3:logging-interceptor:4.9.1'
@@ -55,6 +58,9 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
     // OkHttp 请求信息拦截器(UI)
     implementation 'com.readystatesoftware.chuck:library-no-op:1.1.0'
+
+    implementation 'com.github.bumptech.glide:glide:4.14.2'
+    //kapt 'com.github.bumptech.glide:compiler:4.14.2'
 
 
     testImplementation 'junit:junit:4.13.2'

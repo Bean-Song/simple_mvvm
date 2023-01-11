@@ -52,7 +52,8 @@ private var mToast: Toast? = null
  */
 fun toastShow(text: CharSequence, duration: Int = Toast.LENGTH_SHORT) {
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
-        Toast.makeText(MyApplication.context, text, duration).show()
+        val toast = Toast.makeText(MyApplication.context, text, duration)
+        toast.apply { setText(text) }.show()
     } else {
         if (mToast != null) {
             mToast?.setText(text)
